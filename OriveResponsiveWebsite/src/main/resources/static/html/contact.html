@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/contact.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Ion Icon -->
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+
+    <title>Contact Us</title>
+    <style>
+        .error-message {
+            color: red;
+            font-size: 14px;
+            font-style: italic;
+            /* Add more styles as per your requirements */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- top part starts here -->
+    <div class="top-bar">
+        <span><ion-icon name="call-outline"></ion-icon>+91 9777798142</span>
+        <ul>
+            <li><a href="https://www.facebook.com/orivesolutions"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://twitter.com/OriveSolutions"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/orivesolutions/"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+    </div>
+    <!-- top part ends here -->
+
+
+    <!-- Navbar Starts here -->
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="/img/Orive Logo.png" alt="logo"></a>
+        </div>
+
+        <div class="toggle">
+            <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+        </div>
+        <ul class="menu">
+            <li><a href="/html/index.html">Home</a></li>
+            <li><a href="/html/about.html">About</a></li>
+            <li><a href="/html/service.html">Services</a></li>
+            <li><a href="/html/blog.html">Blog</a></li>
+            <li><a href="/html/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- Navbar Ends here -->
+
+    <!-- Contact Webpage Top -->
+
+    <section class="box1">
+        <img src="/img/contact.png"
+            alt=""></img>
+        <h1>Contact Us</h1>
+    </section>
+
+    <!-- Contact Us -->
+
+    <div class="contact-main">
+        <div class="contactUs">
+            <div class="title">
+                <h2>Get in Touch</h2>
+            </div>
+            <div class="box">
+                <div class="contact form">
+                    <h3>Send a Message</h3>
+
+                    <form th:action="@{/contact-create}" th:object="${contactDetails}" method="post">
+                        <div class="formBox">
+                            <div class="row50">
+                                <div class="inputBox">
+                                    <span>First Name</span>
+                                    <input type="text" name="firstName" placeholder="John">
+                                    <span>
+                                        <div th:if="${#fields.hasErrors('firstName')}" class="error-message">
+                                            <p th:errors="*{firstName}"></p>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="inputBox">
+                                    <span>Last Name</span>
+                                    <input type="text" name="lastName" placeholder="Doe">
+                                    <span>
+                                        <div th:if="${#fields.hasErrors('lastName')}" class="error-message">
+                                            <p th:errors="*{lastName}"></p>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row50">
+                                <div class="inputBox">
+                                    <span>Email Address</span>
+                                    <input type="text" name="emailAddress" placeholder="johndoe21@gmail.com">
+                                    <span>
+                                        <div th:if="${#fields.hasErrors('emailAddress')}" class="error-message">
+                                            <p th:errors="*{emailAddress}"></p>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="inputBox">
+                                    <span>Mobile</span>
+                                    <input type="text" name="phoneNumber" placeholder="+91 987 654 3210">
+                                    <span>
+                                        <div th:if="${#fields.hasErrors('phoneNumber')}" class="error-message">
+                                            <p th:errors="*{phoneNumber}"></p>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row50">
+                                <div class="inputBox">
+                                    <span>Organisation/Website</span>
+                                    <input type="text" name="organisationName" placeholder="johndoe21@gmail.com">
+                                    <span>
+                                        <div th:if="${#fields.hasErrors('organisationName')}" class="error-message">
+                                            <p th:errors="*{organisationName}"></p>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row100">
+                                <div class="inputBox">
+                                    <span>Message</span>
+                                    <textarea name="writeMessage" placeholder="ERP/CRM/HRM"></textarea>
+                                    <span>
+                                        <div th:if="${#fields.hasErrors('writeMessage')}" class="error-message">
+                                            <p th:errors="*{writeMessage}"></p>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="row100">
+                                <div class="inputBox">
+                                    <input type="submit" value="Send">
+                                    <!-- <div class="popup" id="popup">
+                                        <img src="">
+                                        <h2>Thank You!</h2>
+                                        <p>Your details has been successfully submitted. Thanks!</p>
+                                        <button type="button" onclick="closePopup()">OK</button>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Your submit button and other form elements -->
+                    </form>
+                    </form>
+                </div>
+
+                <!-- info -->
+                <div class="contact info">
+                    <h3>Contact Info</h3>
+                    <div class="infoBox">
+                        <div>
+                            <span><i class='bx bx-location-plus'></i></span>
+                            <p>DCB-014, DLF Cyber City Rd, Chandaka Industrial Estate, Patia, Bhubaneswar, Odisha 751024
+                                <br> India
+                            </p>
+                        </div>
+                        <div>
+                            <span><i class='bx bxs-envelope'></i></span>
+                            <a href="Email:info@orivesolutions.com">info@orivesolutions.com</a>
+                        </div>
+                        <div>
+                            <span><i class='bx bxs-phone-call'></i></span>
+                            <a href="tel:9876543219">+91 9777798142</a>
+                        </div>
+                        <!-- social media links -->
+                        <ul class="sci">
+                            <li><a href="https://www.facebook.com/orivesolutions"><i
+                                        class='bx bxl-facebook-square'></i></a></li>
+                            <li><a href="https://twitter.com/OriveSolutions"><i class='bx bxl-twitter'></i></a></li>
+                            <li><a href="#"><i class='bx bxl-linkedin-square'></i></a></li>
+                            <li><a href="https://www.instagram.com/orivesolutions/"><i
+                                        class='bx bxl-instagram-alt'></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- map -->
+                <div class="contact map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.8069800602134!2d85.80528587551206!3d20.349591081135348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909d501f96465%3A0xb57ff80bdaa3d1c5!2sOrive%20Solutions!5e0!3m2!1sen!2sin!4v1690364316398!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col" id="company">
+                    <img src="/img/Orive Logo.png" alt="" class="logo">
+                    <p>
+                        At Orive Solutions , we believe in the transformative power of technology. Our mission is to
+                        revolutionize
+                        industries, empower businesses, and enhance lives through cutting-edge IT solutions.
+                        Your Vision, Our Expertise, Together we Achieve Limitless Potential
+                    </p>
+                    <div class="social">
+                        <a href="https://www.facebook.com/orivesolutions"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/orivesolutions/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/OriveSolutions"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="col" id="services">
+                    <h3>Services</h3>
+                    <div class="links">
+                        <a href="/html/erp.html">ERP</a>
+                        <a href="/html/website.html">Web/App Development</a>
+                        <a href="/html/crm.html">CRM</a>
+                        <a href="/html/hrm.html">HRM</a>
+                        <a href="/html/sms.html">Bulk SMS</a>
+                        <a href="/html/business.html">Business Start-up</a>
+                    </div>
+                </div>
+
+                <div class="col" id="useful-links">
+                    <h3>Links</h3>
+                    <div class="links">
+                        <a href="/html/about.html">About</a>
+                        <a href="/html/service.html">Services</a>
+                        <a href="/html/contact.html">Help</a>
+                    </div>
+                </div>
+
+                <div class="col" id="contact">
+                    <h3>Contact</h3>
+                    <div class="contact-details">
+                        <i class="fa fa-location"></i>
+                        <p>DCB-014, DLF Cyber City Rd, Chandaka Industrial Estate, Patia, Bhubaneswar, Odisha 751024,
+                            <br> India
+                        </p>
+                    </div>
+                    <div class="contact-details">
+                        <i class="fa fa-phone"></i>
+                        <p>+91 9777798142</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form">
+                    <form action="">
+                        <input type="text" placeholder="Email here...">
+                        <button><i class="fa fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- Footer Section ends -->
+
+    <!-- JQuery for the menu-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+     <!-- Javascript file for linking the menu box functioning -->
+     <script src="/js/main.js"></script>
+
+</body>
+
+</html>

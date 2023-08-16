@@ -1,0 +1,539 @@
+@charset "ISO-8859-1";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Tinos&family=Varela+Round&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Tinos", serif;
+  overflow-x: hidden;
+}
+
+:root {
+  --main-color: #f33c3c;
+  --second-color: #8e44ad;
+  --text-color: #444;
+  --gradient: linear-gradient(120deg, #2980b9, #8e44ad);
+}
+
+/* Custom Scroll Bar */
+
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 6rem;
+}
+/* top part styling starts here */
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 25px;
+  background: #c6493b;
+}
+
+.top-bar span {
+  color: #fff;
+}
+
+.top-bar ul {
+  list-style: none;
+  display: flex;
+}
+
+.top-bar li {
+  margin: 0px 5px;
+}
+
+.top-bar a {
+  color: #fff;
+}
+
+.top-bar a:hover {
+  color: #222;
+}
+/* top part styling ends here */
+
+/* Header or navbar Styling starts */
+nav {
+  background: #222;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: #fff;
+}
+
+nav a:hover {
+  color: #c6493b;
+}
+
+.logo {
+  flex: 1;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.logo a:hover {
+  color: #fff;
+}
+
+.logo img {
+  background: white;
+  width: 22rem;
+  margin-left: 10px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.menu li {
+  padding: 15px 10px;
+  font-size: 1rem;
+}
+
+.toggle {
+  font-size: 30px;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    display: block;
+    position: relative;
+    padding: 15px 20px;
+  }
+  .menu {
+    margin-top: 15px;
+    display: none;
+  }
+  .menu.active,
+  .toggle {
+    display: block;
+  }
+  .toggle {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+}
+@media (max-width: 376px){
+
+
+  .logo img {
+      background: white;
+      width: 15rem;
+      margin-left: 10px;
+  }
+  
+  .menu {
+      margin-top: 15px;
+      display: none;
+  }
+
+  .menu.active,
+  .toggle {
+      display: block;
+  }
+
+  .toggle {
+      position: absolute;
+      top: 15px;
+      right: 30px;
+  }
+}
+
+@media (max-width: 415px){
+  .logo img {
+      background: white;
+      width: 15rem;
+      margin-left: 10px;
+  }
+}
+/* Header or Navbar Styling ends */
+
+/* Machine Learning Section Styling */
+
+.hero{
+  max-width: 114rem;
+  height: 40rem;
+  background: url(/img/AI_background.jpg) no-repeat center center / cover;
+  margin: 1rem auto;
+}
+
+main{
+  width: 100%;
+  max-width: 80rem;
+  background-color: white;
+  margin: 0 auto;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  margin-top: -15rem;
+}
+main h2{
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+main .profile-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+main .profile-container .profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .profile-container .profile .img-container{
+  width: 6rem;
+  height: 6rem;
+  background: url(/img/AI_profile.jpg) no-repeat center center / cover;
+  border-radius: 0.5rem;
+}
+main .profile-container .profile .text{
+  margin: 0 1rem;
+  color: #5b5963;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.profile .text h3{
+  text-transform: uppercase;
+}
+.btn{
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  padding: 0.3rem 1.5rem;
+  background-color: #fd735a;
+  border-radius: 0.2rem;
+}
+main .content p{
+  color: #5b5963;
+  margin: 1rem 0;
+}
+main .content h4{
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #5b5963;
+  margin: 2rem 0;
+}
+main .content .content-img-container{
+  width: 100%;
+  height: 35rem;
+  background: url(/img/AI_img02.jpg) no-repeat center center / cover;
+}
+blockquote{
+  font-size: 1.4rem;
+  padding: 1rem 2.8rem;
+  line-height: 1.6;
+  font-weight: 300;
+  box-shadow: inset 0.5rem 0 0 #fd735a;
+  background-color: #f5f5f5;
+}
+.tags{
+  display: flex;
+  align-items: center;
+}
+.tags p{
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+.tags a{
+  display: inline-block;
+  padding: 0.3rem 1.5rem;
+  background-color: #f5f5f5;
+  color: #5b5963;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+}
+.articles{
+  width: 100%;
+  background-color: #f5f5f5;
+  margin: 5rem 0;
+  padding: 5rem 0;
+}
+.articles .article-heading{
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+.article-heading h5{
+  font-size: 10rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  position: relative;
+  color: rgba(223, 223, 223, 0.308);
+}
+.article-heading h6{
+  font-size: 4rem;
+  font-weight: 200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #5b5963;
+}
+.cards{
+  /* display: flex; */
+  justify-content: space-between;
+  margin: 4rem auto;
+  gap: 5rem;
+}
+.cards .card-container{
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.cards .card-container .img-holder{
+  max-width: 100%;
+  height: 24rem;
+  background: url(/img/recent_blog_01.jpg) no-repeat center center / cover;
+  position: relative;
+}
+
+.cards .card-container.two .img-holder{
+  background: url(/img/recent_blog_02.jpg) no-repeat center center / cover;
+}
+
+.cards .card-container.three .img-holder{
+  background: url(/img/recent_blog_03.jpg) no-repeat center center / cover;
+}
+
+.cards .card-container .img-holder a{
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  padding: 0.3rem 1.5rem;
+  display: inline-block;
+  background-color: white;
+  color: #429f98;
+  font-weight: 400;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  transition: all 0.4s ease;
+}
+
+.cards .card-container:hover{
+  transform: translateY(-1rem);
+}
+
+.cards .card-container:hover a{
+  background-color: #fd735a;
+  color: white;
+}
+.cards .card-container .card-text{
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 0 0.3rem grey;
+}
+.cards .card-container .card-text h4{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.cards .card-container .card-text p{
+  font-size: 1.2rem;
+}
+
+.articles .button{
+  margin: 0 auto;
+  text-align: center;
+}
+.articles .btn{
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  font-weight: 200;
+  border-radius: none;
+  padding: 0.5rem 3rem;
+}
+@media screen and (max-width: 400px){
+  .cards{
+  display: inline-block;
+}
+}
+/* Machine Learning Section Styling ends*/
+
+/* Footer Styling starts */
+
+footer {
+  background-color: #000000ff;
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  padding: 3rem 1rem;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col {
+  min-width: 250px;
+  color: #f2f2f2f2;
+  font-family: poppins;
+  padding: 0 2rem;
+}
+.col .logo {
+  width: 200px;
+  margin-bottom: 25px;
+}
+
+.col .company {
+  font-size: 1.3rem;
+}
+.col h3 {
+  color: #c6493b;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+.col h3::after {
+  content: "";
+  height: 3px;
+  width: 0px;
+  background-color: #c6493b;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+.col h3:hover::after {
+  width: 30px;
+}
+.col .social a i {
+  color: #c6493b;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-right: 5px;
+  transition: 0.3s ease;
+}
+.col .social a i:hover {
+  transform: scale(1.5);
+  filter: grayscale(25);
+}
+.col .links a {
+  display: block;
+  text-decoration: none;
+  color: #f2f2f2;
+  margin-bottom: 5px;
+  position: relative;
+  transition: 0.3s ease;
+  font-size: 1.3rem;
+}
+.col .links a::before {
+  content: "";
+  height: 16px;
+  width: 3px;
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  background-color: #c6493b;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+.col .links a:hover::before {
+  opacity: 1;
+}
+.col .links a:hover {
+  transform: translateX(-8px);
+  color: #c6493b;
+}
+.col .contact-details {
+  display: inline-flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+}
+.col .contact-details i {
+  margin-right: 15px;
+}
+.row .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+.row .form input {
+  background-color: #1a1c20ff;
+  color: #fff;
+  border: 0;
+  outline: none;
+  padding: 14px 20px;
+  border-radius: 6px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size: 1rem;
+}
+.form button {
+  padding: 14px 20px;
+  border: 0;
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #c6493b;
+}
+
+/********** Responsive Design ********/
+@media (max-width: 900px) {
+  .row {
+    flex-direction: column;
+  }
+  .col {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .col {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
+
+/* Footer Styling ends */
