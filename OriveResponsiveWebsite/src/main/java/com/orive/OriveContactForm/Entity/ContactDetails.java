@@ -42,10 +42,11 @@ public class ContactDetails implements Serializable{
 	
 	
 	@NotBlank(message = "First name is required")
-    @Size(min = 2, max = 50, message = "First name must be between {min} and {max} characters long")
-    @Pattern(regexp = "^[a-zA-Z]+$", message = "First name must contain only alphabetic characters")
+	@Size(min = 2, max = 50, message = "First name must be between {min} and {max} characters long")
+	@Pattern(regexp = "^[a-zA-Z .]+$", message = "First name must contain only alphabetic characters and spaces")
 	@Column(name = "firstName")
 	private String firstName;
+
 	
 	
 	@NotBlank(message = "First name is required")
